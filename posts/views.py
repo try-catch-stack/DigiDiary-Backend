@@ -13,7 +13,7 @@ class PostsView(generics.ListCreateAPIView):
     serializer_class = PostSerializer
 
     def perform_create(self, serializer):
-        serializer.save(author=UserProfile.objects.get(user=self.request.user))
+        serializer.save(author=self.request.user)
 
 
 class PostDetailView(generics.RetrieveUpdateDestroyAPIView):
