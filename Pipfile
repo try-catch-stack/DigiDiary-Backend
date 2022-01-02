@@ -4,6 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+django = "==2.2.13"
+django-heroku = "*"
+gunicorn = "*"
+djangorestframework = "*"
+django-debug-toolbar = "*"
+djoser = "*"
+djangorestframework_simplejwt = "*"
 
 [dev-packages]
 autopep8 = "*"
