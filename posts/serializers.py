@@ -9,9 +9,9 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        read_only_fields = ['id', 'likes', 'author', ]
+        read_only_fields = ['id', 'likes', 'author', 'created_at']
         fields = ['id', 'title', 'topic', 'author',
-                  'image_url', 'likes', 'post_content']
+                  'image_url', 'likes', 'post_content', 'created_at']
 
 
 class PostBookmarkSerializer(serializers.ModelSerializer):

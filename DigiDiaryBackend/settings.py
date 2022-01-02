@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-r^+izr8!u0aw=)-b&(etd-pey4ju7wbbqft5=pisn325!*0#-#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.108', '127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'djoser',
     'rest_framework',
+    'rest_framework.authtoken',
     'authentication',
     'posts'
 ]
@@ -142,7 +143,8 @@ DJOSER = {
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ),
 }
@@ -154,4 +156,5 @@ SIMPLE_JWT = {
 
 INTERNAL_IPS = [
     '127.0.0.1',
+    '192.168.0.108',
 ]
