@@ -142,6 +142,7 @@ DJOSER = {
 }
 
 REST_FRAMEWORK = {
+    'DATETIME_FORMAT': '%b %d, %Y',
     'DEFAULT_AUTHENTICATION_CLASSES': (
         # 'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.TokenAuthentication',
