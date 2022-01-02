@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from datetime import timedelta
+import django_heroku
 
 from pathlib import Path
 
@@ -159,3 +160,5 @@ INTERNAL_IPS = [
     '127.0.0.1',
     '192.168.0.108',
 ]
+
+django_heroku.settings(locals())
