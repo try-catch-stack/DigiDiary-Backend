@@ -1,2 +1,3 @@
-release: python manage.py migrate
-web: gunicorn DigiDiaryBackend.wsgi.py
+web: gunicorn DigiDiaryBackend.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
