@@ -1,10 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from posts.models import Post
-
-
-class User(AbstractUser):
-    email = models.EmailField(unique=True)
+from django.contrib.auth.models import User
 
 
 class UserProfile(models.Model):
